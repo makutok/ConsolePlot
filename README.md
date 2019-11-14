@@ -54,8 +54,8 @@ OUTPUT:                                      |
 It comes with lots of pre-loaded functions to use them directly.
 
 ```
-.sinus()	.linear(double)		.power(double)		.exponential()	.floor()
-.cosinus()	.parabola()		.squareRoot()		.logarithmic()	.ceiling()
+.sinus()	.linear(double)		.power(double)		.exponential()		.floor()
+.cosinus()	.parabola()		.squareRoot()		.logarithmic()		.ceiling()
 .tangent()	.hyperbola()		.root(double)		.absolute(int)
 ```
 
