@@ -1,5 +1,6 @@
-package MathDraw;
+package test;
 
+import MathDraw.MathDraw;
 import java.util.Scanner;
 
 class TestFunc {
