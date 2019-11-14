@@ -1,7 +1,9 @@
-# MathDraw
+MathDraw
+========
 Java library to draw math functions in any terminal for Java (8+).
-## Usage
 
+Usage
+-----
 First `import MathDraw;`.
 
 Then, declare a `MathDraw` object. There are various possible constructors:
@@ -57,7 +59,8 @@ It comes with lots of pre-loaded functions to use them directly.
 .tangent()	.hyperbola()		.root(double)		.absolute(int)
 ```
 
-## Your own functions
+Your own functions
+------------------
 You can declare your own one-parameter functions and send them directly to the drawing object.
 
 ```java
@@ -103,7 +106,9 @@ OUTPUT:                                      |                                 �
            ·                                 |
           ·                                  |
 ```
-## Coordinate axis options
+
+Coordinate axis options
+-----------------------
 To set the maximum and the minimum of the function representation modify `.Axis.min` and `.Axis.max`.
 
 To configure the size of the representation modify `.Axis.unit`, which is the unit each character will represent.
@@ -117,11 +122,12 @@ or though getters & setters:
 ```java
 md.xAxis.setMin (double);
   .yAxis.setMax (double);
-		.setLength (double);	// set min and max with half of the given length
-		.setUnit (double);
+	.setLength (double);	// set min and max with half of the given length
+	.setUnit (double);
 ```
 
-## Printing options
+Printing options
+----------------
 `MathDraw` objects can be set with the characters that will represent the function.
 
 ```java
@@ -133,7 +139,9 @@ md.xAxis.setChar (char);
   .yAxis.setChar (char);
 ```
 `.setChFunc(char)` sets the representation character of the function.
-## More execution examples
+
+More execution examples
+-----------------------
 ```java
 MathDraw md = new MathDraw(8, 0.09, 6, 0.2);
 md.hyperbola();
@@ -193,8 +201,12 @@ OUTPUT:     |
 
 Cool, uh?
 
-## Contributing
+Contributing
+------------
 Pull requests are welcome. Also feel free to open an issue to discuss about what you would change.
 
-## License
-MIT, you can read it in the [license](https://gitlab.com/makuto/mathdraw/blob/master/LICENSE) file.
+License
+-------
+Copyright	(c)	2019	Miguel Bautista Pérez  
+GPL license, you have a copy of it in the [license](https://gitlab.com/makuto/mathdraw/blob/master/LICENSE) file.
+
