@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-import termath.Termath;
+import termplot.TerminalPlotter;
 
 class TestFunc {
 	// you can make your own fucntions and send them to Termath
@@ -11,13 +11,13 @@ class TestFunc {
 	}
 }
 
-public class Testermath {
+public class Test {
 	public static void main (String[] args) {
 
 		Scanner a = new Scanner(System.in);
 		// Just for make the program wait
 
-		Termath md = new Termath(12, 0.05, 2.5, 0.05);
+		TerminalPlotter md = new TerminalPlotter(12, 0.05, 2.5, 0.05);
 		md.sine();
 		a.nextInt();
 		md.cosine();
@@ -27,7 +27,7 @@ public class Testermath {
 		md.reciprocal();
 		// a lot of preloaded functions
 
-		md = new Termath(-5, 5, 0.05, -2.5, 5.5, 0.1);
+		md = new TerminalPlotter(-5, 5, 0.05, -2.5, 5.5, 0.1);
 
 		md.func(TestFunc::elevarE);
 		// you send your own functions this way

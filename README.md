@@ -1,22 +1,22 @@
-TERMath - Java
+TerminalPlotter Java - `termplot`
 =======
-Java library to draw **math** functions in any **term**inal, for Java (8+).
+Simple java library to draw **math** functions in any **term**inal, for Java (8+).
 
 Usage
 -----
-First `import Termath;`
+First `import TerminalPlotter;`
 
-Then, declare a `Termath` object. There are various possible constructors:
+Then, declare a `TerminalPlotter` object. There are various possible constructors:
 
 ```java
-new Termath (double xLength, double yLength);
-new Termath (double xLength, double xUnit, double yLength, double yUnit);
-new Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
+new TerminalPlotter(double xLength, double yLength);
+new TerminalPlotter(double xLength, double xUnit, double yLength, double yUnit);
+new TerminalPlotter(double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
 ```
 Let's start with the second one. The simplest way to draw a function is this:
 
 ```java
-Termath md = new Termath(4, 0.03, 3, 0.1);
+TerminalPlotter md = new TerminalPlotter(4, 0.03, 3, 0.1);
 
 md.sine();
 ```
@@ -115,7 +115,7 @@ To configure the size of the representation modify `.Axis.unit`, which is the un
 You can do this though the constructor:
 
 ```java
-Termath md = new Termath(-2, +2, 0.05, -1,5, +1,5, 0.09);
+TerminalPlotter md = new TerminalPlotter(-2, +2, 0.05, -1,5, +1,5, 0.09);
 ```
 or though getters & setters:
 
@@ -128,7 +128,7 @@ md.xAxis.setMin (double);
 
 Printing options
 ----------------
-`Termath` objects can be set with the characters that will represent the function.
+`TerminalPlotter` objects can be set with the characters that will represent the function.
 
 ```java
 md.setChFunc (char);
@@ -143,7 +143,7 @@ md.xAxis.setChar (char);
 More execution examples
 -----------------------
 ```java
-Termath md = new Termath(8, 0.09, 6, 0.2);
+TerminalPlotter md = new TerminalPlotter(8, 0.09, 6, 0.2);
 md.hyperbola();
 ```
 ```
@@ -208,5 +208,5 @@ Pull requests are welcome. Also feel free to open an issue to discuss about what
 License
 -------
 Copyright (c) 2019 Miguel Bautista Pérez  
-Under GPL, you have a copy of it in the [license](LICENSE) file.
+termplot is under GPL, you have a copy of it in the [license](LICENSE) file.
 

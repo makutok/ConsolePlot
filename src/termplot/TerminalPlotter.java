@@ -1,8 +1,8 @@
-package termath;
+package termplot;
 
 import java.util.function.Function;
 
-public class Termath {
+public class TerminalPlotter {
 
 	public Axis xAxis;
 	public Axis yAxis;
@@ -11,15 +11,15 @@ public class Termath {
 	private char chZero;
 	private char chSpace;
 
-	public Termath () {
+	public TerminalPlotter () {
 		this(12, 6);
 	}
 
-	public Termath (double xLength, double yLength) {
+	public TerminalPlotter (double xLength, double yLength) {
 		this(xLength, 0.05, yLength, 0.1);
 	}
 
-	public Termath (double xLength, double xUnit, double yLength, double yUnit) {
+	public TerminalPlotter (double xLength, double xUnit, double yLength, double yUnit) {
 		double xh = xLength / 2;
 		double yh = yLength / 2;
 		this.xAxis = new Axis(-xh, xh, xUnit, '—');
@@ -30,11 +30,11 @@ public class Termath {
 
 	}
 
-	public Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
+	public TerminalPlotter (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
 		this(xMin, xMax, xUnit, yMin, yMax, yUnit, '·', '+', ' ', '—', '|');
 	}
 
-	public Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
+	public TerminalPlotter (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
 			char chZero, char chSpace, char chXAxis, char chYAxis) {
 		this.xAxis = new Axis(xMin, xMax, xUnit, chXAxis);
 		this.yAxis = new Axis(yMin, yMax, yUnit, chYAxis);

@@ -1,4 +1,4 @@
-package termath;
+package termplot;
 
 public class Axis {
 	private double min;
