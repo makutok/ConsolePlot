@@ -1,8 +1,8 @@
-package MathDraw;
+package termath;
 
 import java.util.function.Function;
 
-public class MathDraw {
+public class Termath {
 
 	public Axis xAxis;
 	public Axis yAxis;
@@ -11,15 +11,15 @@ public class MathDraw {
 	private char chZero;
 	private char chSpace;
 
-	public MathDraw () {
+	public Termath () {
 		this(12, 6);
 	}
 
-	public MathDraw (double xLength, double yLength) {
+	public Termath (double xLength, double yLength) {
 		this(xLength, 0.05, yLength, 0.1);
 	}
 
-	public MathDraw (double xLength, double xUnit, double yLength, double yUnit) {
+	public Termath (double xLength, double xUnit, double yLength, double yUnit) {
 		double xh = xLength / 2;
 		double yh = yLength / 2;
 		this.xAxis = new Axis(-xh, xh, xUnit, '—');
@@ -30,11 +30,11 @@ public class MathDraw {
 
 	}
 
-	public MathDraw (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
+	public Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
 		this(xMin, xMax, xUnit, yMin, yMax, yUnit, '·', '+', ' ', '—', '|');
 	}
 
-	public MathDraw (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
+	public Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
 			char chZero, char chSpace, char chXAxis, char chYAxis) {
 		this.xAxis = new Axis(xMin, xMax, xUnit, chXAxis);
 		this.yAxis = new Axis(yMin, yMax, yUnit, chYAxis);
@@ -88,8 +88,8 @@ public class MathDraw {
 			System.out.print('\n');
 			y -= yAxis.getUnit();
 		}
-
 	}
+	
 
 	public void sine () {
 		this.func(Math::sin);

@@ -1,28 +1,28 @@
-MathDraw
-========
-Java library to draw math functions in any terminal for Java (8+).
+TERMath - Java
+=======
+Java library to draw **math** functions in any **term**inal, for Java (8+).
 
 Usage
 -----
-First `import MathDraw;`.
+First `import Termath;`
 
-Then, declare a `MathDraw` object. There are various possible constructors:
+Then, declare a `Termath` object. There are various possible constructors:
 
 ```java
-new MathDraw (double xLength, double yLength);
-new MathDraw (double xLength, double xUnit, double yLength, double yUnit);
-new MathDraw (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
+new Termath (double xLength, double yLength);
+new Termath (double xLength, double xUnit, double yLength, double yUnit);
+new Termath (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
 ```
 Let's start with the second one. The simplest way to draw a function is this:
 
 ```java
-MathDraw md = new MathDraw(4, 0.03, 3, 0.1);
+Termath md = new Termath(4, 0.03, 3, 0.1);
 
 md.sine();
 ```
-`md` will draw functions from `x=-2` to `x=2` and from `y=-1.5` to `y=1.5`.
+`md` will draw functions from `x=-2` to `x=2` and from `y=-1.5` to `y=1.5`
 
-Each character will represent `0.03x` and `0.1y`.
+Each character will represent `0.03x` and `0.1y`
 
 ```
 OUTPUT:                                      |
@@ -109,13 +109,13 @@ OUTPUT:                                      |                                 �
 
 Coordinate axis options
 -----------------------
-To set the maximum and the minimum of the function representation modify `.Axis.min` and `.Axis.max`.
+To set the maximum and the minimum of the function representation modify `.Axis.min` and `.Axis.max`
 
 To configure the size of the representation modify `.Axis.unit`, which is the unit each character will represent.
 You can do this though the constructor:
 
 ```java
-MathDraw md = new MathDraw(-2, +2, 0.05, -1,5, +1,5, 0.09);
+Termath md = new Termath(-2, +2, 0.05, -1,5, +1,5, 0.09);
 ```
 or though getters & setters:
 
@@ -128,7 +128,7 @@ md.xAxis.setMin (double);
 
 Printing options
 ----------------
-`MathDraw` objects can be set with the characters that will represent the function.
+`Termath` objects can be set with the characters that will represent the function.
 
 ```java
 md.setChFunc (char);
@@ -143,7 +143,7 @@ md.xAxis.setChar (char);
 More execution examples
 -----------------------
 ```java
-MathDraw md = new MathDraw(8, 0.09, 6, 0.2);
+Termath md = new Termath(8, 0.09, 6, 0.2);
 md.hyperbola();
 ```
 ```
@@ -207,6 +207,6 @@ Pull requests are welcome. Also feel free to open an issue to discuss about what
 
 License
 -------
-Copyright	(c)	2019	Miguel Bautista Pérez  
-GPL license, you have a copy of it in the [license](https://gitlab.com/makuto/mathdraw/blob/master/LICENSE) file.
+Copyright (c) 2019 Miguel Bautista Pérez  
+Under GPL, you have a copy of it in the [license](LICENSE) file.
 

@@ -1,4 +1,4 @@
-package MathDraw;
+package termath;
 
 public class Axis {
 	private double min;

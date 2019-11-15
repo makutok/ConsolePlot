@@ -1,22 +1,23 @@
 package test;
 
-import MathDraw.MathDraw;
 import java.util.Scanner;
 
+import termath.Termath;
+
 class TestFunc {
-	// you can make your own fucntions and send them to MathDraw
+	// you can make your own fucntions and send them to Termath
 	public static double elevarE (double x) {
 		return Math.pow(Math.E, x);
 	}
 }
 
-public class testMathDraw {
+public class Testermath {
 	public static void main (String[] args) {
 
 		Scanner a = new Scanner(System.in);
 		// Just for make the program wait
 
-		MathDraw md = new MathDraw(12, 0.05, 2.5, 0.05);
+		Termath md = new Termath(12, 0.05, 2.5, 0.05);
 		md.sine();
 		a.nextInt();
 		md.cosine();
@@ -26,7 +27,7 @@ public class testMathDraw {
 		md.reciprocal();
 		// a lot of preloaded functions
 
-		md = new MathDraw(-5, 5, 0.05, -2.5, 5.5, 0.1);
+		md = new Termath(-5, 5, 0.05, -2.5, 5.5, 0.1);
 
 		md.func(TestFunc::elevarE);
 		// you send your own functions this way
