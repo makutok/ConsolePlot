@@ -1,22 +1,22 @@
-TerminalPlotter Java - `termplot`
-=======
-Simple java library to draw **math** functions in any **term**inal, for Java (8+).
+ConsolePlot - Java
+===========
+Simple java library to draw math functions in any terminal, for Java (8+).
 
 Usage
 -----
-First `import TerminalPlotter;`
+First `import ConsolePlot;`
 
-Then, declare a `TerminalPlotter` object. There are various possible constructors:
+Then, declare a `ConsolePlot` object. There are various possible constructors:
 
 ```java
-new TerminalPlotter(double xLength, double yLength);
-new TerminalPlotter(double xLength, double xUnit, double yLength, double yUnit);
-new TerminalPlotter(double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
+new ConsolePlot(double xLength, double yLength);
+new ConsolePlot(double xLength, double xUnit, double yLength, double yUnit);
+new ConsolePlot(double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit);
 ```
 Let's start with the second one. The simplest way to draw a function is this:
 
 ```java
-TerminalPlotter md = new TerminalPlotter(4, 0.03, 3, 0.1);
+ConsolePlot md = new ConsolePlot(4, 0.03, 3, 0.1);
 
 md.sine();
 ```
@@ -115,7 +115,7 @@ To configure the size of the representation modify `.Axis.unit`, which is the un
 You can do this though the constructor:
 
 ```java
-TerminalPlotter md = new TerminalPlotter(-2, +2, 0.05, -1,5, +1,5, 0.09);
+ConsolePlot md = new ConsolePlot(-2, +2, 0.05, -1,5, +1,5, 0.09);
 ```
 or though getters & setters:
 
@@ -128,7 +128,7 @@ md.xAxis.setMin (double);
 
 Printing options
 ----------------
-`TerminalPlotter` objects can be set with the characters that will represent the function.
+`ConsolePlot` objects can be set with the characters that will represent the function.
 
 ```java
 md.setChFunc (char);
@@ -143,7 +143,7 @@ md.xAxis.setChar (char);
 More execution examples
 -----------------------
 ```java
-TerminalPlotter md = new TerminalPlotter(8, 0.09, 6, 0.2);
+ConsolePlot md = new ConsolePlot(8, 0.09, 6, 0.2);
 md.hyperbola();
 ```
 ```
