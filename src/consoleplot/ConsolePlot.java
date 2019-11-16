@@ -1,8 +1,8 @@
-package termplot;
+package consoleplot;
 
 import java.util.function.Function;
 
-public class TerminalPlotter {
+public class ConsolePlot {
 
 	public Axis xAxis;
 	public Axis yAxis;
@@ -11,15 +11,15 @@ public class TerminalPlotter {
 	private char chZero;
 	private char chSpace;
 
-	public TerminalPlotter () {
+	public ConsolePlot () {
 		this(12, 6);
 	}
 
-	public TerminalPlotter (double xLength, double yLength) {
+	public ConsolePlot (double xLength, double yLength) {
 		this(xLength, 0.05, yLength, 0.1);
 	}
 
-	public TerminalPlotter (double xLength, double xUnit, double yLength, double yUnit) {
+	public ConsolePlot (double xLength, double xUnit, double yLength, double yUnit) {
 		double xh = xLength / 2;
 		double yh = yLength / 2;
 		this.xAxis = new Axis(-xh, xh, xUnit, '—');
@@ -30,11 +30,11 @@ public class TerminalPlotter {
 
 	}
 
-	public TerminalPlotter (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
+	public ConsolePlot (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit) {
 		this(xMin, xMax, xUnit, yMin, yMax, yUnit, '·', '+', ' ', '—', '|');
 	}
 
-	public TerminalPlotter (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
+	public ConsolePlot (double xMin, double xMax, double xUnit, double yMin, double yMax, double yUnit, char chFunc,
 			char chZero, char chSpace, char chXAxis, char chYAxis) {
 		this.xAxis = new Axis(xMin, xMax, xUnit, chXAxis);
 		this.yAxis = new Axis(yMin, yMax, yUnit, chYAxis);

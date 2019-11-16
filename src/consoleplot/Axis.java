@@ -1,4 +1,4 @@
-package termplot;
+package consoleplot;
 
 public class Axis {
 	private double min;
